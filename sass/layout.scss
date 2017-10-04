@@ -8,6 +8,9 @@
     opacity: 0;
     @include transition(opacity, .6s);
 }
+.accent {
+	@include transition(opacity, .6s);
+}
 .fade-in-out-scroll, .fade-in-out-scroll-simple, .fade-in-out-scroll-left, .fade-in-out-scroll-right {
     opacity: 0;
     position: relative; 
@@ -40,6 +43,7 @@ header {
     top: 3em;
     left: 0;
     padding: 0 0 0 1%;
+    z-index: 10;
     ul {
 	    list-style: none;
 	    padding: 0;
@@ -89,6 +93,7 @@ header {
     right: -50px;
     transform: rotate(290deg);
     opacity: .3;
+    z-index: -1;
 }
 .palm-2 {
 	position: fixed;
@@ -101,6 +106,21 @@ header {
     opacity: .2;
     left: -100px;
     z-index: -1;
+}
+.code-1 {
+	position: fixed;
+	width: 314px;
+	height: 320px;
+	background: url('img/code.png') no-repeat center;
+	background-size: 100% auto;
+    bottom: 0;
+    right: -50px;
+    transform: rotate(0);
+    opacity: .3;
+    z-index: -1;
+}
+.accent {
+	z-index: -1;
 }
 
 /* Shared

@@ -21,7 +21,7 @@ $(document).ready(function(){
 		var option = $(this).attr('href');
 		option = option.split('#')[1];
 		option = option+'-scroll';
-		$('html,body').animate({scrollTop: $('#'+option).offset().top},'normal');
+		$('html,body').animate({scrollTop: $('#'+option).offset().top},800);
 	});
 	
 	//homepage scrolling colors
@@ -143,7 +143,7 @@ $(window).load(function(){
 	if(document.location.href.split('#')[1]){
 		var page_hash = document.location.href.split('#')[1];
 		page_hash = '#'+page_hash+'-scroll';
-		$('html,body').animate({scrollTop: $(page_hash).offset().top},'normal');
+		$('html,body').animate({scrollTop: $(page_hash).offset().top},800);
 	}
 });
 
@@ -174,6 +174,11 @@ function scrollfade_in_up(element, range, manualoffset, emthreshold){
 				$(this).css({ 'top': emthreshold +'rem' });
 			} else if ( top_calc < '0' ) {
 				$(this).css({ 'top': 0 });
+			}
+			if (($(this).offset().top - $(window).scrollTop()) < 1) { 
+				$('.accent',this).stop().css('opacity',0); 
+			} else {
+				$('.accent',this).stop().attr('style',''); 
 			}
 		});
 		

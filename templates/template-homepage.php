@@ -15,12 +15,18 @@
 			<div class="home-section middle-section container home-section-copy" id="where-scroll">
 				<div class="fade-in-out-scroll">
 					<?php the_field('section_2_copy'); ?>
-					<div class="palm-1"></div>
-					<div class="palm-2"></div>
+					<div class="accent">
+						<div class="palm-1"></div>
+						<div class="palm-2"></div>
+					</div>
 				</div>
 			</div>
 			<div class="home-section middle-section container" id="what-scroll">
 				<div class="fade-in-out-scroll">
+					<div class="accent">
+						<div class="code-1"></div>
+						<div class="code-2"></div>
+					</div>
 					<?php the_field('section_3_copy'); ?>
 					<div class="portfolio-links">
 						<div class="grid_4 link-inner-wrapper">
