@@ -159,11 +159,15 @@ function scrollfade_in_up(element, range, manualoffset, emthreshold){
 			var window_height = $(window).outerHeight(); 
 			var window_offset_bottom = window_height - manualoffset; 
 			var window_offset_top = window_height - manualoffset - range; 
-			
+		
 			var calc = 1 + (scrollTop - offset + window_offset_bottom) / range;
 			top_calc = emthreshold - calc;
 			$(this).css({ 'opacity': calc });
 			$(this).css({ 'top': top_calc + 'rem' });
+			
+			var section_accent = $(this).data('section');
+			var section_accent_offset = $(this).data('accent-offset');
+			$('.accent.'+section_accent).css({ 'opacity': calc });
 			
 			if ( calc > '1' ) {
 				$(this).css({ 'opacity': 1 });
@@ -175,10 +179,15 @@ function scrollfade_in_up(element, range, manualoffset, emthreshold){
 			} else if ( top_calc < '0' ) {
 				$(this).css({ 'top': 0 });
 			}
-			if (($(this).offset().top - $(window).scrollTop()) < 1) { 
-				$('.accent',this).stop().css('opacity',0); 
+			if (($(this).offset().top - $(window).scrollTop()) < section_accent_offset) { 
+				$('.accent.'+section_accent).css('opacity',0); 
 			} else {
-				$('.accent',this).stop().attr('style',''); 
+				$('.accent.'+section_accent).css('opacity',calc); 
+				if ( calc > '1' ) {
+					$('.accent.'+section_accent).css({ 'opacity': 1 });
+				} else if ( calc < '0' ) {
+					$('.accent.'+section_accent).css({ 'opacity': 0 });
+				}
 			}
 		});
 		
