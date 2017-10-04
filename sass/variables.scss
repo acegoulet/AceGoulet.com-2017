@@ -1,0 +1,35 @@
+// Font sizes
+
+$font-base: 18px;
+
+$font-size-small: .6em;
+$font-size-medium: .8333em;
+$font-size-regular: 1em;
+$font-size-large: 1.25em;
+$font-size-x-large: 1.666em;
+$font-size-xx-large: 3.3333em;
+
+// Breakpoints
+$tablet-landscape-point: "(max-width: 1024px)";
+$tablet-portrait-point: "(max-width: 1023px)";
+$mobile-landscape-wide-point: "(max-width: 767px)";
+$mobile-landscape-narrow-point: "(max-width: 567px)";
+$mobile-portrait-point: "(max-width: 479px)";
+
+// Layout
+$layout-max-width: 70%;
+$layout-number-of-columns: 12;
+$layout-column-margin: 0.01;
+
+// Colors
+$color-black: #4f4f4f;
+$color-white: #fff;
+$color-blue: #d3eef5;
+$color-red: #ff564f;
+$color-bg-red: #ffcccc;
+$color-light-grey: #f2f2f2;
+$color-yellow: #ffffc7;
+
+// Fonts
+$main-font: 'Raleway', sans-serif;
+$secondary-font: 'Droid Serif', serif;

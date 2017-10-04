@@ -1,0 +1,30 @@
+{
+    "key": "group_59d407271b7a0",
+    "title": "Post Options",
+    "fields": false,
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "custom_fields",
+        "discussion",
+        "comments",
+        "slug",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1507067711
+}

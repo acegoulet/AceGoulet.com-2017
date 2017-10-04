@@ -1,0 +1,89 @@
+/* Fonts
+----------------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: $main-font;
+}
+header ul {
+	font-family: $secondary-font;
+}
+
+/* Sizes
+----------------------------------------------------------------------------------------------------*/
+
+body {
+	font-size: $font-base;
+}
+h1 {
+    font-size: $font-size-xx-large;
+    @include rt(30, 60, 320, 1320);
+}
+h2 {
+    font-size: $font-size-x-large;
+    @include rt(25, 30, 320, 1320);
+}
+h3, .home-section-copy, .menu-title {
+    font-size: $font-size-large;
+}
+h4, header ul, .link-title {
+    font-size: $font-size-medium;
+}
+h5 {
+    font-size: $font-size-regular;
+}
+h6, .link-description, .button {
+    font-size: $font-size-small;
+}
+
+
+
+/* Line Heights
+----------------------------------------------------------------------------------------------------*/
+
+body {
+	line-height: 1.83;
+}
+h1, h2, h3, h4, h5, h6, .button {
+    line-height: 1.5;
+}
+.link-description {
+	line-height: 1.6;
+}
+.menu-title, .link-title {
+	line-height: 1.2;
+}
+
+/* Colors
+----------------------------------------------------------------------------------------------------*/
+
+body {
+	color: $color-black;
+}
+a {
+	color: $color-red;
+}
+a:hover, .link-description {
+	color: $color-black;
+}
+header a {
+	color: $color-black;
+}
+header a:hover, header a.active {
+	color: $color-red;
+}
+body.red {
+	
+}
+
+/* Styles
+----------------------------------------------------------------------------------------------------*/
+
+a {
+	text-decoration: none;
+}
+header, .link-title, .button {
+	text-transform: uppercase;
+}
+header a, .link-title, .button {
+	font-weight: 600;
+}
