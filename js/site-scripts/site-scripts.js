@@ -22,6 +22,7 @@ $(document).ready(function(){
 		option = option.split('#')[1];
 		option = option+'-scroll';
 		$('html,body').animate({scrollTop: $('#'+option).offset().top},800);
+		return false;
 	});
 	
 	//homepage scrolling colors
@@ -136,6 +137,10 @@ $(document).ready(function(){
 	setTimeout(function(){
 		$('.fade-in-load').css('opacity', 1);
     }, 600);
+    
+    
+    //hello there
+    console.log('o_0 https://www.youtube.com/watch?v=7YvAYIJSSZY');
 });
 
 //home nav scroll on load

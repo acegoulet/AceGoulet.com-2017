@@ -1,31 +1,28 @@
 <?php get_header(); ?>
-
-	<?php if (have_posts()) : ?>
-		<h1 class="page-title">Search: <?php the_search_query(); ?></h1>
-
-		<?php while (have_posts()) : the_post(); ?>
-			
-			<article <?php post_class(); ?>>
-				<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+	<h1 class="articles-title hidden">Search: <?php the_search_query(); ?></h1>
+	<div class="roll-header container text-center"></div>
+	
+	<div class="blog-wrapper container">
+		<div class="grid_8">
+			<?php if (have_posts()) : ?>
 		
-				<div class="entry-meta">
-					<p>Posted by <?php the_author_posts_link(); ?> on <span class="datetime"><?php the_time('c'); ?> <?php the_time(get_option('date_format')); ?></span>. <a href="<?php the_permalink(); ?>/#comments"><?php comments_number('No comments','One comment','% comments'); ?></a>.</p>
-				</div>
+				<?php while (have_posts()) : the_post(); ?>
+					
+					<?php get_template_part('templates/partials/roll-item'); ?>
+						
+				<?php endwhile; ?>
 				
-				<div class="entry-summary">
-					<?php the_excerpt(); ?>
-				</div>
-			</article>
+				<div class="clear"></div>
 				
-		<?php endwhile; ?>
+				<?php get_template_part('templates/partials/roll-pagination'); ?>
 		
-			<div class="pagination">
-                <p class="next"><?php previous_posts_link('Newer posts', '0'); ?></p>
-                <p class="previous"><?php next_posts_link('Older posts', '0'); ?></p>
-            </div>
-
-	<?php else : ?>
-		<p>Unfortunately your search didn't return anything. Please try again.</p>
-	<?php endif; ?>
+			<?php else : ?>
+				<h3 class="roll-title">No posts found in this archive.</h3>
+			<?php endif; ?>
+		</div>
+		
+		<?php get_template_part('templates/partials/roll-sidebar'); ?>
+		<div class="clear"></div>
+	</div>
 
 <?php get_footer(); ?>

@@ -1,23 +1,22 @@
 <?php get_header(); ?>
-<?php while (have_posts()) : the_post(); ?>
+<h1 class="articles-title hidden"><?php single_post_title(); ?></h1>
 
-	<article <?php post_class(); ?>>
-		<div class="entry-header">
-			<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-			<div class="entry-meta">
-				<p>Posted by <?php the_author_posts_link(); ?> on <span class="datetime"><?php the_time('c'); ?> <?php the_time(get_option('date_format')); ?></span>. <a href="<?php the_permalink(); ?>/#comments"><?php comments_number('No comments','One comment','% comments'); ?></a>.</p>
-			</div>
-		</div>
-        <div class="entry-summary">
-			<?php the_excerpt(); ?>
-        </div>
-	</article>
+<div class="blog-wrapper container">
+	<div class="grid_8">
+		<?php while (have_posts()) : the_post(); ?>
+			
+			<?php get_template_part('templates/partials/roll-item'); ?>
+			
+		<?php endwhile; ?>
+		
+		<div class="clear"></div>
+		
+		<?php get_template_part('templates/partials/roll-pagination'); ?>
+		
+	</div>
 	
-<?php endwhile; ?>
-
-<div class="pagination">
-    <p class="next"><?php previous_posts_link('Newer posts', '0'); ?></p>
-    <p class="previous"><?php next_posts_link('Older posts', '0'); ?></p>
+	<?php get_template_part('templates/partials/roll-sidebar'); ?>
+	
+	<div class="clear"></div>
 </div>
-
 <?php get_footer(); ?>

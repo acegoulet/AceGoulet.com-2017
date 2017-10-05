@@ -30,6 +30,7 @@
 							?>
 										<a href="<?php the_sub_field('link'); ?>" target="_blank" class="port-links">
 											<span class="link-title"><?php the_sub_field('title'); ?></span>
+											<span class="link-attribution"><?php the_sub_field('attribution'); ?></span>
 											<span class="link-description"><?php the_sub_field('text'); ?></span>
 										</a>
 								
@@ -66,6 +67,7 @@
 					<div class="clear"></div>
 				</div>
 			</div>
+			<?php get_template_part( 'templates/partials/footer-content' ); ?>
 		</div>
 		
 	</article>

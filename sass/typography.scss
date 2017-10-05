@@ -25,13 +25,13 @@ h2 {
 h3, .home-section-copy, .menu-title {
     font-size: $font-size-large;
 }
-h4, header ul, .link-title {
+h4, header ul, .link-title, footer, .entry-meta, .nav-links, .entry-summary, .sidebar ul {
     font-size: $font-size-medium;
 }
 h5 {
     font-size: $font-size-regular;
 }
-h6, .link-description, .button {
+h6, .link-description, .button, .link-attribution {
     font-size: $font-size-small;
 }
 
@@ -43,13 +43,13 @@ h6, .link-description, .button {
 body {
 	line-height: 1.83;
 }
-h1, h2, h3, h4, h5, h6, .button {
+h1, h4, h5, h6, .button {
     line-height: 1.5;
 }
-.link-description {
+.link-description, .link-attribution{
 	line-height: 1.6;
 }
-.menu-title, .link-title {
+.menu-title, .link-title, h2, h3 {
 	line-height: 1.2;
 }
 
@@ -62,13 +62,13 @@ body {
 a {
 	color: $color-red;
 }
-a:hover, .link-description {
+a:hover, .link-description, .current-cat {
 	color: $color-black;
 }
 header a {
 	color: $color-black;
 }
-header a:hover, header a.active {
+header a:hover, header a.active, header .current_page_parent a {
 	color: $color-red;
 }
 body.red {
@@ -84,6 +84,15 @@ a {
 header, .link-title, .button {
 	text-transform: uppercase;
 }
-header a, .link-title, .button {
+header a, .link-title, .button, .page-numbers.current {
 	font-weight: 600;
+}
+.link-attribution, .entry-meta {
+	font-style: italic;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
 }

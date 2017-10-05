@@ -55,6 +55,10 @@ header {
 /* Footer
 ----------------------------------------------------------------------------------------------------*/
 
+footer {
+	width: 100%;
+	clear: both;
+}
 
 /* Homepage
 ----------------------------------------------------------------------------------------------------*/
@@ -75,7 +79,7 @@ header {
 .port-links {
 	display: block;
 	margin-bottom: 1.25em;
-	.link-title, .link-description {
+	span {
 		display: block;
 	}
 }
@@ -92,7 +96,7 @@ header {
     bottom: 0;
     right: -50px;
     transform: rotate(290deg);
-    opacity: .3;
+    opacity: .1;
     z-index: -1;
 }
 .palm-2 {
@@ -103,7 +107,7 @@ header {
 	background-size: 100% auto;
     bottom: 0;
     transform: rotate(50deg);
-    opacity: .2;
+    opacity: .1;
     left: -100px;
     z-index: -1;
 }
@@ -116,7 +120,7 @@ header {
     bottom: 0;
     right: -50px;
     transform: rotate(0);
-    opacity: .3;
+    opacity: .1;
     z-index: -1;
 }
 .code-2 {
@@ -126,13 +130,56 @@ header {
 	background: url('img/code-2.png') no-repeat center;
 	background-size: 100% auto;
     bottom: -20px;
-    opacity: .2;
+    opacity: .1;
     left: -10px;
     z-index: -1;
 }
 .accent {
 	z-index: -1;
 	opacity: 0;
+}
+
+/* Blog
+----------------------------------------------------------------------------------------------------*/
+.blog-wrapper {
+	margin-top: 2%;
+}
+.roll-title {
+	margin: 0;
+}
+.entry-meta {
+	margin: 0 0 1em;
+	p {
+		margin: 0;
+	}
+}
+h2.screen-reader-text {
+    display: none;
+}
+.pagination {
+	margin: 0 0 2em 0;
+}
+.page-numbers {
+	margin: 0 .25em;
+}
+.page-numbers.prev, .page-numbers.next {
+	margin: 0 .5em;
+}
+.blog-roll-post {
+	margin-bottom: 2em;
+}
+
+//sidebar
+.sidebar {
+	margin-bottom: 2em;
+	h3 {
+		margin: 0;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: .5em 0 0 0;
+	}
 }
 
 /* Shared
@@ -147,4 +194,7 @@ header {
 }
 .fade-in-load {
 	opacity: 0;
+}
+h1.page-title {
+	margin: 5% 0 2%;
 }

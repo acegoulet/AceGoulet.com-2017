@@ -118,7 +118,7 @@ Reformat default "read more" tag associated with the_excerpt()
 --------------------------------------------- */
 
 function replace_excerpt($content) {
-	return str_replace('[&hellip;]',' ',$content);
+	return str_replace('[&hellip;]','...',$content);
 }
 add_filter('the_excerpt', 'replace_excerpt');
 
@@ -126,7 +126,7 @@ add_filter('the_excerpt', 'replace_excerpt');
 Change length of excerpt returned with the_excerpt()
 --------------------------------------------- */
 function custom_excerpt_length( $length ) {
-    $length = 10;
+    $length = 30;
 	return $length;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
