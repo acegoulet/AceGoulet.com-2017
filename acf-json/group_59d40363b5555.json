@@ -7,6 +7,7 @@
             "label": "Footer Content",
             "name": "footer_content",
             "type": "wysiwyg",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -20,6 +21,33 @@
             "media_upload": 0,
             "tabs": "all",
             "delay": 0
+        },
+        {
+            "key": "field_59d5b1880b083",
+            "label": "Bookmarked Posts",
+            "name": "bookmarked_posts",
+            "type": "relationship",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         }
     ],
     "location": [
@@ -39,5 +67,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1507066930
+    "modified": 1507176873
 }

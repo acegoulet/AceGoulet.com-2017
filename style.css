@@ -724,7 +724,7 @@ body, html {
 
 /* Fonts
 ----------------------------------------------------------------------------------------------------*/
-body {
+body, input {
   font-family: "Raleway", sans-serif; }
 
 header ul {
@@ -745,23 +745,23 @@ h1 {
     h1 {
       font-size: 60px; } }
 
-h2 {
+h2, .searchform input {
   font-size: 1.666em;
   font-size: 25px; }
   @media screen and (min-width: 320px) and (max-width: 1320px) {
-    h2 {
+    h2, .searchform input {
       font-size: calc(25px + (30 - 25) * ((100vw - 320px) / (1320 - 320))); } }
   @media screen and (min-width: 1320px) {
-    h2 {
+    h2, .searchform input {
       font-size: 30px; } }
 
 h3, .home-section-copy, .menu-title {
   font-size: 1.25em; }
 
-h4, header ul, .link-title, footer, .entry-meta, .nav-links, .entry-summary, .sidebar ul {
+h4, header ul, .link-title, footer, .entry-meta, .nav-links, .entry-summary, .sidebar ul, .widget-list {
   font-size: 0.8333em; }
 
-h5 {
+h5, .bookmark {
   font-size: 1em; }
 
 h6, .link-description, .button, .link-attribution {
@@ -772,13 +772,13 @@ h6, .link-description, .button, .link-attribution {
 body {
   line-height: 1.83; }
 
-h1, h4, h5, h6, .button {
+h1, h4, h5, h6, .button, .bookmark {
   line-height: 1.5; }
 
 .link-description, .link-attribution {
   line-height: 1.6; }
 
-.menu-title, .link-title, h2, h3 {
+.menu-title, .link-title, h2, h3, h1.page-title {
   line-height: 1.2; }
 
 /* Colors
@@ -789,7 +789,7 @@ body {
 a {
   color: #ff564f; }
 
-a:hover, .link-description, .current-cat {
+a:hover, .link-description, .current-cat a {
   color: #4f4f4f; }
 
 header a {
@@ -803,10 +803,10 @@ header a:hover, header a.active, header .current_page_parent a {
 a {
   text-decoration: none; }
 
-header, .link-title, .button {
+header, .link-title, .button, .bookmark {
   text-transform: uppercase; }
 
-header a, .link-title, .button, .page-numbers.current {
+header a, .link-title, .button, .page-numbers.current, .bookmark {
   font-weight: 600; }
 
 .link-attribution, .entry-meta {
@@ -963,6 +963,9 @@ footer {
 .roll-title {
   margin: 0; }
 
+.roll-header {
+  margin-top: 5%; }
+
 .entry-meta {
   margin: 0 0 1em; }
   .entry-meta p {
@@ -983,6 +986,31 @@ h2.screen-reader-text {
 .blog-roll-post {
   margin-bottom: 2em; }
 
+.searchform {
+  padding: 1% 0 3.3%; }
+  .searchform input[type=text] {
+    width: 100%;
+    border: 1px solid #ff564f;
+    padding: .5em .75em;
+    margin: 0; }
+
+.bookmark {
+  padding-top: 15%;
+  display: block;
+  text-align: center;
+  border: 1px solid;
+  position: relative;
+  margin-bottom: 2%; }
+  .bookmark .bookmark-inner {
+    width: 90%;
+    margin: 0 5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.single-pagination {
+  border-top: 1px solid #d3eef5; }
+
 .sidebar {
   margin-bottom: 2em; }
   .sidebar h3 {
@@ -991,6 +1019,9 @@ h2.screen-reader-text {
     list-style: none;
     padding: 0;
     margin: .5em 0 0 0; }
+
+.widget {
+  margin-bottom: 2em; }
 
 /* Shared
 ----------------------------------------------------------------------------------------------------*/
@@ -1005,7 +1036,7 @@ h2.screen-reader-text {
   opacity: 0; }
 
 h1.page-title {
-  margin: 5% 0 2%; }
+  margin: 0% 0 2%; }
 
 /* Wordpress Content Styles
 ---------------------------------------------------------------------------------------------------- */
@@ -1030,6 +1061,15 @@ h1.page-title {
 .entry-content blockquote p {
   margin-bottom: 0.818em; }
 
+.entry-content ul li, .entry-content ol li {
+  margin-bottom: 1em; }
+
+.entry-content ul li:last-child, .entry-content ol li:last-child {
+  margin-bottom: 0; }
+
 .entry-content code {
   font-family: consolas, 'andale mono', 'courier new', monospace;
   font-size: 1em; }
+
+.entry-content > *:first-child {
+  margin-top: 0; }

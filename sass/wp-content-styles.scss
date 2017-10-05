@@ -29,8 +29,20 @@
     	margin-bottom: 0.818em;
     }
     
+    ul, ol {
+	    li {
+		    margin-bottom: 1em;
+	    }
+	    li:last-child {
+		    margin-bottom: 0;
+	    }
+    }
+    
     code {
     	font-family: consolas, 'andale mono', 'courier new', monospace;
     	font-size: 1em;
+    }
+    > *:first-child {
+	    margin-top: 0;
     }
 }

@@ -1,7 +1,7 @@
 /* Fonts
 ----------------------------------------------------------------------------------------------------*/
 
-body {
+body, input {
 	font-family: $main-font;
 }
 header ul {
@@ -18,17 +18,17 @@ h1 {
     font-size: $font-size-xx-large;
     @include rt(30, 60, 320, 1320);
 }
-h2 {
+h2, .searchform input {
     font-size: $font-size-x-large;
     @include rt(25, 30, 320, 1320);
 }
 h3, .home-section-copy, .menu-title {
     font-size: $font-size-large;
 }
-h4, header ul, .link-title, footer, .entry-meta, .nav-links, .entry-summary, .sidebar ul {
+h4, header ul, .link-title, footer, .entry-meta, .nav-links, .entry-summary, .sidebar ul, .widget-list {
     font-size: $font-size-medium;
 }
-h5 {
+h5, .bookmark {
     font-size: $font-size-regular;
 }
 h6, .link-description, .button, .link-attribution {
@@ -43,13 +43,13 @@ h6, .link-description, .button, .link-attribution {
 body {
 	line-height: 1.83;
 }
-h1, h4, h5, h6, .button {
+h1, h4, h5, h6, .button, .bookmark {
     line-height: 1.5;
 }
 .link-description, .link-attribution{
 	line-height: 1.6;
 }
-.menu-title, .link-title, h2, h3 {
+.menu-title, .link-title, h2, h3, h1.page-title {
 	line-height: 1.2;
 }
 
@@ -62,7 +62,7 @@ body {
 a {
 	color: $color-red;
 }
-a:hover, .link-description, .current-cat {
+a:hover, .link-description, .current-cat a {
 	color: $color-black;
 }
 header a {
@@ -81,10 +81,10 @@ body.red {
 a {
 	text-decoration: none;
 }
-header, .link-title, .button {
+header, .link-title, .button, .bookmark {
 	text-transform: uppercase;
 }
-header a, .link-title, .button, .page-numbers.current {
+header a, .link-title, .button, .page-numbers.current, .bookmark {
 	font-weight: 600;
 }
 .link-attribution, .entry-meta {
