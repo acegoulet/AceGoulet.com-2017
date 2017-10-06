@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div class="home-section middle-section container home-section-copy" id="where-scroll">
-				<div class="fade-in-out-scroll" data-section="where" data-accent-offset="1">
+				<div class="fade-in-out-scroll" data-section="where" data-accent-offset="-30">
 					<div class="grid_12">
 						<?php the_field('section_2_copy'); ?>
 					</div>
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 			<div class="home-section container home-section-copy" id="contact-scroll">
-				<div class="fade-in-out-scroll" data-section="contact" data-accent-offset="1">
+				<div class="fade-in-out-scroll" data-section="contact" data-accent-offset="-500">
 					<div class="grid_12">
 						<?php the_field('section_4_copy'); ?>
 					</div>
@@ -88,15 +88,15 @@
 		
 	</article>
 	<div class="accent where">
-		<div class="palm-1 "></div>
+		<div class="palm-1 no-mobile"></div>
 		<div class="palm-2"></div>
 	</div>
 	<div class="accent what">
 		<div class="code-1"></div>
-		<div class="code-2"></div>
+		<div class="code-2 no-mobile"></div>
 	</div>
 	<div class="accent contact">
-		<div class="contact-1"></div>
+		<div class="contact-1 no-mobile"></div>
 		<div class="contact-2"></div>
 	</div>
 	

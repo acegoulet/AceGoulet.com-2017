@@ -5,15 +5,21 @@ $ = jQuery.noConflict();
 $(document).ready(function(){
 	var compareWidth; 
 	var detector;
-	detector = $('#wrapper'); // whatever container accurately reflects the site width
+	detector = $('body'); // whatever container accurately reflects the site width
 	compareWidth = detector.width();
 	$(window).resize(function(){
 		if(detector.width()!=compareWidth){
 			compareWidth = detector.width();
+			$('body').removeClass('menu-open');
 			if(detector.width()>500){ //if wrapper is greater than 500px wide
 			//	do something
 			}
 		}
+	});
+	
+	//mobile nav
+	$('.navicon').click(function(){
+		$('body').toggleClass('menu-open');
 	});
 	
 	//home nav scrolling
@@ -22,6 +28,7 @@ $(document).ready(function(){
 		option = option.split('#')[1];
 		option = option+'-scroll';
 		$('html,body').animate({scrollTop: $('#'+option).offset().top},800);
+		$('body').removeClass('menu-open');
 		return false;
 	});
 	

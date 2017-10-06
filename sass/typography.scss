@@ -39,7 +39,14 @@ h6, .link-description, .link-attribution, pre {
     font-size: em(12px);
 }
 
-
+@media #{$tablet-portrait-point} {
+	.menu-title {
+	    font-size: em(65px);
+	}
+	header a {
+	    font-size: em(30px);
+	}
+}
 
 /* Line Heights
 ----------------------------------------------------------------------------------------------------*/

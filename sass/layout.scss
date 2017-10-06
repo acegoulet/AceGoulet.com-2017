@@ -15,6 +15,9 @@
     opacity: 0;
     position: relative; 
 }
+header {
+	@include transition(left, .6s);
+}
 
 /* Body
 ----------------------------------------------------------------------------------------------------*/
@@ -48,14 +51,45 @@ header {
     padding: 0 0 0 rem(22px);
     z-index: 10;
     @media #{$tablet-portrait-point} {
-	    width: 100%;
+	    width: auto;
+	    background: $color-white;
+	    top: 0;
+	    height: 100%;
+	    overflow: auto;
+	    left: -100%;
+	    @media #{$mobile-landscape-wide-point} {
+		    width: 100%;
+	    }
+    }
+    .header-inner {
+	    @media #{$tablet-portrait-point} {
+		    width: rem(240px);
+		    margin: rem(115px) rem(63px) 0;
+	    }
+	    @media #{$mobile-landscape-wide-point} {
+		    margin: 0;
+		    position: absolute;
+		    left: 50%;
+		    top: 50%;
+		    transform: translate(-50%, -50%);
+	    }
+	    @media #{$mobile-height-point} {
+		    top: 0;
+		    transform: translate(-50%, 0);
+	    }
     }
     ul {
 	    list-style: none;
 	    padding: 0;
 	    margin: rem(58px) 0 0;
+	    @media #{$tablet-portrait-point} {
+	    	margin: rem(46px) 0 0 rem(5px);
+	    }
 	    li {
 		    margin-bottom: rem(11px);
+		    @media #{$tablet-portrait-point} {
+			    margin-bottom: rem(33px);
+		    }
 	    }
     }
 }
@@ -66,7 +100,7 @@ header {
     position: fixed;
     top: rem(11px);
     left: rem(11px);
-    z-index: 10;
+    z-index: 11;
     -moz-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
     -webkit-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
     -o-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
@@ -124,6 +158,12 @@ header {
     }
 }
 .menu-open {
+	@media #{$mobile-landscape-wide-point} {
+		overflow: hidden;
+	}
+	header {
+		left: 0;
+	}
 	.navicon {
 		height: 29px;
         width: 29px;
@@ -377,4 +417,9 @@ h2.screen-reader-text {
 }
 h1.page-title {
 	margin: rem(42px) 0 0;
+}
+.no-mobile {
+	@media #{$mobile-landscape-wide-point} {
+		display: none !important;
+	}
 }

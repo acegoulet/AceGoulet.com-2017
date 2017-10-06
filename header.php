@@ -24,14 +24,16 @@
     	<div class="bottom-right row-end bottom-row all-transition"></div>
 	</a>
 	<header>
-		<div class="menu-title"><?php bloginfo('name'); ?></div>
-		<?php 
-			wp_nav_menu( 
-				array(
-					'theme_location' => 'main-nav',
-					'fallback_cb' => false,
-					'menu_id' => 'main-nav'
-				)
-			);
-		?>
+		<div class="header-inner">
+			<div class="menu-title"><?php bloginfo('name'); ?></div>
+			<?php 
+				wp_nav_menu( 
+					array(
+						'theme_location' => 'main-nav',
+						'fallback_cb' => false,
+						'menu_id' => 'main-nav'
+					)
+				);
+			?>
+		</div>
 	</header>
