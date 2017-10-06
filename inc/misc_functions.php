@@ -251,7 +251,7 @@ function aceify_login_style() { ?>
 
 	<style type="text/css">
 		body.login {
-			background: #15160e;
+			background: #F1FCFD;
 		}
 		body.login div#login {
     		padding-top: 2%;
@@ -260,9 +260,9 @@ function aceify_login_style() { ?>
 			display: none;
 		}
 		body.login div#login h1{
-			background: url("<?php echo gsdu(); ?>/img/logo-login.jpg") center no-repeat;
+			background: url("<?php echo gsdu(); ?>/img/login-logo.png") center no-repeat;
 			width: 100%;
-			height: 291px;
+			height: 160px;
 		}
 		.login form {
 			
