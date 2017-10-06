@@ -400,6 +400,12 @@ h2.screen-reader-text {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		-ms-word-break: break-all;
+		word-break: break-all;
+		word-break: break-word;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+        hyphens: auto;
 	}
 }
 .button:hover {
