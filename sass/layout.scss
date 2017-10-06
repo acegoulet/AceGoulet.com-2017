@@ -224,49 +224,44 @@ footer {
 
 .palm-1 {
 	position: fixed;
-	width: 227px;
-	height: 271px;
-	background: url('img/palm-1.png') no-repeat center;
+	width: 191px;
+	height: 302px;
+	background: url('img/cactus.svg') no-repeat center;
 	background-size: 100% auto;
     bottom: 0;
-    right: -50px;
-    transform: rotate(290deg);
-    opacity: .1;
+    right: 50px;
     z-index: -1;
 }
 .palm-2 {
 	position: fixed;
-	width: 351px;
-	height: 441px;
-	background: url('img/palm-2.png') no-repeat center;
+	width: 482px;
+	height: 283px;
+	background: url('img/palm-trees.svg') no-repeat center;
 	background-size: 100% auto;
     bottom: 0;
-    transform: rotate(50deg);
-    opacity: .1;
-    left: -100px;
+    left: 0;
+    //transform: rotate(50deg);
+    //left: -100px;
     z-index: -1;
 }
 .code-1 {
 	position: fixed;
-	width: 314px;
-	height: 320px;
-	background: url('img/code.png') no-repeat center;
+	width: 180px;
+	height: 282px;
+	background: url('img/code-dollar.svg') no-repeat center;
 	background-size: 100% auto;
     bottom: 0;
-    right: -50px;
-    transform: rotate(0);
-    opacity: .1;
+    right: 0;
     z-index: -1;
 }
 .code-2 {
 	position: fixed;
-	width: 200px;
-	height: 367px;
-	background: url('img/code-2.png') no-repeat center;
+	width: 284px;
+	height: 265px;
+	background: url('img/code-bracket.svg') no-repeat center;
 	background-size: 100% auto;
-    bottom: -20px;
-    opacity: .1;
-    left: -10px;
+    bottom: 0;
+    left: 0;
     z-index: -1;
 }
 .contact-1 {

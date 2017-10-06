@@ -92,8 +92,8 @@
 		<div class="palm-2"></div>
 	</div>
 	<div class="accent what">
-		<div class="code-1"></div>
-		<div class="code-2 no-mobile"></div>
+		<div class="code-1 no-mobile"></div>
+		<div class="code-2"></div>
 	</div>
 	<div class="accent contact">
 		<div class="contact-1 no-mobile"></div>
