@@ -849,7 +849,7 @@ header, .link-title, .button, .tag-list {
 .bookmarked-posts .button {
   text-transform: none; }
 
-.link-attribution, .entry-meta {
+.link-attribution, .entry-meta, blockquote {
   font-style: italic; }
 
 .text-center {
@@ -1259,8 +1259,11 @@ h1.page-title {
   margin: 0 auto; }
 
 .entry-content blockquote, .entry-summary blockquote {
-  padding: 0 1.5em;
-  margin: 1.5em 0; }
+  padding: 1em;
+  margin: 1em 0;
+  background: #F1FCFD; }
+  .entry-content blockquote p, .entry-summary blockquote p {
+    margin: .5em 0; }
 
 .entry-content blockquote p, .entry-summary blockquote p {
   margin-bottom: 0.818em; }

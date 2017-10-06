@@ -21,8 +21,12 @@
     }
     
     blockquote {
-    	padding: 0 1.5em;
-    	margin: 1.5em 0;
+    	padding: 1em;
+    	margin: 1em 0;
+    	background: $color-blue;
+    	p {
+	    	margin: .5em 0;
+    	}
     }
     
     blockquote p {
