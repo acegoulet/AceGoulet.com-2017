@@ -96,8 +96,8 @@
 		<div class="code-2"></div>
 	</div>
 	<div class="accent contact">
-		<div class="contact-1 no-mobile"></div>
-		<div class="contact-2"></div>
+		<div class="contact-1"></div>
+		<div class="contact-2 no-mobile"></div>
 	</div>
 	
 <?php endwhile; ?>
