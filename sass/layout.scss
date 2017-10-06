@@ -21,11 +21,14 @@
 body, html, .home-article, .home-content {
 	height: 100%;
 }
+body {
+	background-color: $color-light-grey;
+}
 body.blue {
 	background-color: $color-blue;
 }
-body.grey {
-	background-color: $color-light-grey;
+body.orange {
+	background-color: $color-orange;
 }
 body.red {
 	background-color: $color-bg-red;
@@ -39,15 +42,18 @@ body.yellow {
 
 header {
     position: fixed;
-    width: 10%;
-    top: 3em;
+    width: 14%;
+    top: rem(40px);
     left: 0;
-    padding: 0 0 0 1%;
+    padding: 0 0 0 rem(22px);
     z-index: 10;
     ul {
 	    list-style: none;
 	    padding: 0;
-	    margin: .75em 0;
+	    margin: rem(58px) 0 0;
+	    li {
+		    margin-bottom: rem(11px);
+	    }
     }
 }
 
@@ -73,18 +79,18 @@ footer {
 	margin-top: 10%;
 	margin-bottom: 10%;
 }
-.portfolio-links {
-	margin-top: 2em;
-}
 .port-links {
 	display: block;
 	margin-bottom: 1.25em;
 	span {
 		display: block;
 	}
-}
-.link-wrapper {
-	margin-top: 1.75em;
+	.link-title {
+		margin-bottom: rem(3px);
+	}
+	.link-attribution {
+		margin-bottom: rem(7px);
+	}
 }
 
 .palm-1 {
@@ -198,28 +204,9 @@ h2.screen-reader-text {
 	padding: 1% 0 3.3%;
 	input[type=text]{
 		width: 100%;
-		border: 1px solid $color-red;
 		padding: .5em .75em;
 		margin: 0;
-	}
-}
-.bookmarked-posts {
-	//margin-top: 5%;
-}
-.bookmark {
-	//background: $color-blue;
-	padding-top: 15%;
-	display: block;
-	text-align: center;
-	border: 1px solid;
-	position: relative;
-	margin-bottom: 2%;
-	.bookmark-inner {
-		width: 90%;
-		margin: 0 5%;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		outline: none;
 	}
 }
 .single-pagination {
@@ -248,9 +235,22 @@ h2.screen-reader-text {
 .button {
 	display: block;
 	text-align: center;
-	border: 1px solid;
 	margin-bottom: 1em;
-	padding: .5em;
+	padding: rem(50px) 0;
+	background: $color-white;
+	border-radius: rem(8px);
+	position: relative;
+	outline: none;
+	.button-inner {
+		width: 96%;
+		margin: 0 2%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.button:hover {
+	opacity: .9;
 }
 .fade-in-load {
 	opacity: 0;

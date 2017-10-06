@@ -4,35 +4,39 @@
 body, input {
 	font-family: $main-font;
 }
-header ul {
+.menu-title {
 	font-family: $secondary-font;
 }
 
 /* Sizes
 ----------------------------------------------------------------------------------------------------*/
 
-body {
-	font-size: $font-base;
+body, html {
+	font-size: $font-size-base;
+}
+.menu-title {
+    font-size: em(48px);
 }
 h1 {
-    font-size: $font-size-xx-large;
-    @include rt(30, 60, 320, 1320);
+    font-size: em(28px);
 }
-h2, .searchform input {
-    font-size: $font-size-x-large;
-    @include rt(25, 30, 320, 1320);
+h2, .home-section-copy {
+    font-size: em(22px);
 }
-h3, .home-section-copy, .menu-title {
-    font-size: $font-size-large;
+h3, header a {
+    font-size: em(20px);
 }
-h4, header ul, .link-title, footer, .entry-meta, .nav-links, .entry-summary, .sidebar ul, .widget-list {
-    font-size: $font-size-medium;
+.button {
+	font-size: rem(20px);
 }
-h5, .bookmark {
-    font-size: $font-size-regular;
+h4, .searchform input {
+    font-size: em(18px);
 }
-h6, .link-description, .button, .link-attribution {
-    font-size: $font-size-small;
+h5, .link-title, footer, .nav-links {
+    font-size: em(16px);
+}
+h6, .link-description, .link-attribution {
+    font-size: em(12px);
 }
 
 
@@ -40,17 +44,29 @@ h6, .link-description, .button, .link-attribution {
 /* Line Heights
 ----------------------------------------------------------------------------------------------------*/
 
-body {
-	line-height: 1.83;
+.menu-title {
+	line-height: .8125;
 }
-h1, h4, h5, h6, .button, .bookmark {
-    line-height: 1.5;
+header a {
+	line-height: 1;
 }
-.link-description, .link-attribution{
-	line-height: 1.6;
-}
-.menu-title, .link-title, h2, h3, h1.page-title {
+.button, .link-title {
 	line-height: 1.2;
+}
+h2 {
+	line-height: 1.363636; 
+}
+.link-attribution, .link-description {
+	line-height: 1.5;
+}
+body {
+	line-height: 1.666;
+}
+.home-section-copy {
+	line-height: 1.8181; 
+}
+.entry-meta {
+	line-height: 2.2222;
 }
 
 /* Colors
@@ -60,7 +76,7 @@ body {
 	color: $color-black;
 }
 a {
-	color: $color-red;
+	color: $color-green;
 }
 a:hover, .link-description, .current-cat a {
 	color: $color-black;
@@ -69,23 +85,36 @@ header a {
 	color: $color-black;
 }
 header a:hover, header a.active, header .current_page_parent a {
-	color: $color-red;
+	color: $color-green;
 }
-body.red {
-	
+
+/* Weights
+----------------------------------------------------------------------------------------------------*/
+
+body {
+	font-weight: 300;
+}
+.link-title, .link-attribution, .button, .page-numbers.current, strong {
+	font-weight: 500;
 }
 
 /* Styles
 ----------------------------------------------------------------------------------------------------*/
 
+body {
+	letter-spacing: .4px;
+}
+.menu-title {
+	letter-spacing: -.625px;
+}
 a {
 	text-decoration: none;
 }
-header, .link-title, .button, .bookmark {
+header, .link-title, .button, {
 	text-transform: uppercase;
 }
-header a, .link-title, .button, .page-numbers.current, .bookmark {
-	font-weight: 600;
+.bookmarked-posts .button {
+	text-transform: none;
 }
 .link-attribution, .entry-meta {
 	font-style: italic;
@@ -95,4 +124,7 @@ header a, .link-title, .button, .page-numbers.current, .bookmark {
 }
 .text-right {
 	text-align: right;
+}
+p {
+	margin: 1.8em 0;
 }

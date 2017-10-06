@@ -9,17 +9,26 @@
 		<div class="home-content">
 			<div class="home-section container home-section-copy" id="who-scroll">
 				<div class="fade-in-load">
-					<?php the_field('section_1_copy'); ?>
+					<div class="grid_12">
+						<?php the_field('section_1_copy'); ?>
+					</div>
+					<div class="clear"></div>
 				</div>
 			</div>
 			<div class="home-section middle-section container home-section-copy" id="where-scroll">
 				<div class="fade-in-out-scroll" data-section="where" data-accent-offset="1">
-					<?php the_field('section_2_copy'); ?>
+					<div class="grid_12">
+						<?php the_field('section_2_copy'); ?>
+					</div>
+					<div class="clear"></div>
 				</div>
 			</div>
 			<div class="home-section middle-section container" id="what-scroll">
 				<div class="fade-in-out-scroll" data-section="what" data-accent-offset="-100">
-					<?php the_field('section_3_copy'); ?>
+					<div class="grid_12">
+						<?php the_field('section_3_copy'); ?>
+					</div>
+					<div class="clear"></div>
 					<div class="portfolio-links">
 						<div class="grid_4 link-inner-wrapper">
 							<?php 
@@ -52,13 +61,20 @@
 			</div>
 			<div class="home-section container home-section-copy" id="contact-scroll">
 				<div class="fade-in-out-scroll" data-section="contact" data-accent-offset="1">
-					<?php the_field('section_4_copy'); ?>
+					<div class="grid_12">
+						<?php the_field('section_4_copy'); ?>
+					</div>
+					<div class="clear"></div>
 					<div class="link-wrapper">
 						<?php if( get_field('section_3_links') ): ?>
 							<?php $count = 0; ?>
 							<?php while( has_sub_field('section_3_links') ): ?>
 								
-								<a href="<?php the_sub_field('link'); ?>" target="_blank" class="button contact-links grid_third"><?php the_sub_field('text'); ?></a>
+								<a href="<?php the_sub_field('link'); ?>" target="_blank" class="button contact-links grid_third">
+									<div class="button-inner">
+										<?php the_sub_field('text'); ?>
+									</div>
+								</a>
 								<?php if( $count == 2 ){ echo '<div class="clear"></div>'; } ?>
 							<?php $count++; if( $count == 3 ){ $count = 0; } endwhile; ?>
 						<?php endif; ?>

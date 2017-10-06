@@ -8,7 +8,7 @@ Version: 1.0
 */
 /* Base and Resets
 ---------------------------------------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Raleway:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,500,500i");
 article,
 aside,
 details,
@@ -71,7 +71,7 @@ body, html {
 /* Grid Classes
 ---------------------------------------------------------------------------------------------------- */
 .container {
-  width: 70%;
+  width: 68%;
   overflow: hidden;
   margin: 0 auto;
   max-width: 100%; }
@@ -722,64 +722,75 @@ body, html {
   width: 0;
   height: 0; }
 
+@font-face {
+  font-family: 'CubanoRegular';
+  src: url("fonts/cubano-regular-webfont.eot");
+  src: url("fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/cubano-regular-webfont.woff") format("woff"), url("fonts/cubano-regular-webfont.ttf") format("truetype"), url("fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /* Fonts
 ----------------------------------------------------------------------------------------------------*/
 body, input {
   font-family: "Raleway", sans-serif; }
 
-header ul {
-  font-family: "Droid Serif", serif; }
+.menu-title {
+  font-family: "CubanoRegular", sans-serif; }
 
 /* Sizes
 ----------------------------------------------------------------------------------------------------*/
-body {
+body, html {
   font-size: 18px; }
 
+.menu-title {
+  font-size: 2.66667em; }
+
 h1 {
-  font-size: 3.3333em;
-  font-size: 30px; }
-  @media screen and (min-width: 320px) and (max-width: 1320px) {
-    h1 {
-      font-size: calc(30px + (60 - 30) * ((100vw - 320px) / (1320 - 320))); } }
-  @media screen and (min-width: 1320px) {
-    h1 {
-      font-size: 60px; } }
+  font-size: 1.55556em; }
 
-h2, .searchform input {
-  font-size: 1.666em;
-  font-size: 25px; }
-  @media screen and (min-width: 320px) and (max-width: 1320px) {
-    h2, .searchform input {
-      font-size: calc(25px + (30 - 25) * ((100vw - 320px) / (1320 - 320))); } }
-  @media screen and (min-width: 1320px) {
-    h2, .searchform input {
-      font-size: 30px; } }
+h2, .home-section-copy {
+  font-size: 1.22222em; }
 
-h3, .home-section-copy, .menu-title {
-  font-size: 1.25em; }
+h3, header a {
+  font-size: 1.11111em; }
 
-h4, header ul, .link-title, footer, .entry-meta, .nav-links, .entry-summary, .sidebar ul, .widget-list {
-  font-size: 0.8333em; }
+.button {
+  font-size: 1.11111rem; }
 
-h5, .bookmark {
+h4, .searchform input {
   font-size: 1em; }
 
-h6, .link-description, .button, .link-attribution {
-  font-size: 0.6em; }
+h5, .link-title, footer, .nav-links {
+  font-size: 0.88889em; }
+
+h6, .link-description, .link-attribution {
+  font-size: 0.66667em; }
 
 /* Line Heights
 ----------------------------------------------------------------------------------------------------*/
-body {
-  line-height: 1.83; }
+.menu-title {
+  line-height: .8125; }
 
-h1, h4, h5, h6, .button, .bookmark {
+header a {
+  line-height: 1; }
+
+.button, .link-title {
+  line-height: 1.2; }
+
+h2 {
+  line-height: 1.363636; }
+
+.link-attribution, .link-description {
   line-height: 1.5; }
 
-.link-description, .link-attribution {
-  line-height: 1.6; }
+body {
+  line-height: 1.666; }
 
-.menu-title, .link-title, h2, h3, h1.page-title {
-  line-height: 1.2; }
+.home-section-copy {
+  line-height: 1.8181; }
+
+.entry-meta {
+  line-height: 2.2222; }
 
 /* Colors
 ----------------------------------------------------------------------------------------------------*/
@@ -787,7 +798,7 @@ body {
   color: #4f4f4f; }
 
 a {
-  color: #ff564f; }
+  color: #25AC99; }
 
 a:hover, .link-description, .current-cat a {
   color: #4f4f4f; }
@@ -796,18 +807,32 @@ header a {
   color: #4f4f4f; }
 
 header a:hover, header a.active, header .current_page_parent a {
-  color: #ff564f; }
+  color: #25AC99; }
+
+/* Weights
+----------------------------------------------------------------------------------------------------*/
+body {
+  font-weight: 300; }
+
+.link-title, .link-attribution, .button, .page-numbers.current, strong {
+  font-weight: 500; }
 
 /* Styles
 ----------------------------------------------------------------------------------------------------*/
+body {
+  letter-spacing: .4px; }
+
+.menu-title {
+  letter-spacing: -.625px; }
+
 a {
   text-decoration: none; }
 
-header, .link-title, .button, .bookmark {
+header, .link-title, .button {
   text-transform: uppercase; }
 
-header a, .link-title, .button, .page-numbers.current, .bookmark {
-  font-weight: 600; }
+.bookmarked-posts .button {
+  text-transform: none; }
 
 .link-attribution, .entry-meta {
   font-style: italic; }
@@ -817,6 +842,9 @@ header a, .link-title, .button, .page-numbers.current, .bookmark {
 
 .text-right {
   text-align: right; }
+
+p {
+  margin: 1.8em 0; }
 
 /* Transitions
 ----------------------------------------------------------------------------------------------------*/
@@ -848,31 +876,36 @@ header a, .link-title, .button, .page-numbers.current, .bookmark {
 body, html, .home-article, .home-content {
   height: 100%; }
 
-body.blue {
-  background-color: #d3eef5; }
+body {
+  background-color: #f4f4f4; }
 
-body.grey {
-  background-color: #f2f2f2; }
+body.blue {
+  background-color: #F1FCFD; }
+
+body.orange {
+  background-color: #FFF2E0; }
 
 body.red {
-  background-color: #ffcccc; }
+  background-color: #FDECEB; }
 
 body.yellow {
-  background-color: #ffffc7; }
+  background-color: #FFFDE5; }
 
 /* Header
 ----------------------------------------------------------------------------------------------------*/
 header {
   position: fixed;
-  width: 10%;
-  top: 3em;
+  width: 14%;
+  top: 2.22222rem;
   left: 0;
-  padding: 0 0 0 1%;
+  padding: 0 0 0 1.22222rem;
   z-index: 10; }
   header ul {
     list-style: none;
     padding: 0;
-    margin: .75em 0; }
+    margin: 3.22222rem 0 0; }
+    header ul li {
+      margin-bottom: 0.61111rem; }
 
 /* Footer
 ----------------------------------------------------------------------------------------------------*/
@@ -892,17 +925,15 @@ footer {
   margin-top: 10%;
   margin-bottom: 10%; }
 
-.portfolio-links {
-  margin-top: 2em; }
-
 .port-links {
   display: block;
   margin-bottom: 1.25em; }
   .port-links span {
     display: block; }
-
-.link-wrapper {
-  margin-top: 1.75em; }
+  .port-links .link-title {
+    margin-bottom: 0.16667rem; }
+  .port-links .link-attribution {
+    margin-bottom: 0.38889rem; }
 
 .palm-1 {
   position: fixed;
@@ -1013,26 +1044,12 @@ h2.screen-reader-text {
   padding: 1% 0 3.3%; }
   .searchform input[type=text] {
     width: 100%;
-    border: 1px solid #ff564f;
     padding: .5em .75em;
-    margin: 0; }
-
-.bookmark {
-  padding-top: 15%;
-  display: block;
-  text-align: center;
-  border: 1px solid;
-  position: relative;
-  margin-bottom: 2%; }
-  .bookmark .bookmark-inner {
-    width: 90%;
-    margin: 0 5%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
+    margin: 0;
+    outline: none; }
 
 .single-pagination {
-  border-top: 1px solid #d3eef5; }
+  border-top: 1px solid #F1FCFD; }
 
 .sidebar {
   margin-bottom: 2em; }
@@ -1051,9 +1068,21 @@ h2.screen-reader-text {
 .button {
   display: block;
   text-align: center;
-  border: 1px solid;
   margin-bottom: 1em;
-  padding: .5em; }
+  padding: 2.77778rem 0;
+  background: #fff;
+  border-radius: 0.44444rem;
+  position: relative;
+  outline: none; }
+  .button .button-inner {
+    width: 96%;
+    margin: 0 2%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.button:hover {
+  opacity: .9; }
 
 .fade-in-load {
   opacity: 0; }

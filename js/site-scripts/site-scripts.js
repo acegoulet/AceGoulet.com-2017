@@ -26,7 +26,7 @@ $(document).ready(function(){
 	});
 	
 	//homepage scrolling colors
-	bg_colors = ['blue', 'red', 'yellow', 'grey'];
+	bg_colors = ['blue', 'red', 'yellow', 'orange'];
 	
 	$('#who-scroll').waypoint(function(direction) {
 		if (direction === 'down') {
@@ -59,7 +59,7 @@ $(document).ready(function(){
 			$.each( bg_colors, function( i, val ) {
 				$('body').removeClass(val);
 			});
-			$('body').addClass('red');
+			$('body').addClass('orange');
 			$('header a').removeClass('active');
 			$('header .where-nav a').addClass('active');
 		}
@@ -72,7 +72,7 @@ $(document).ready(function(){
 			$.each( bg_colors, function( i, val ) {
 				$('body').removeClass(val);
 			});
-			$('body').addClass('red');
+			$('body').addClass('orange');
 			$('header a').removeClass('active');
 			$('header .where-nav a').addClass('active');
 		}
@@ -111,7 +111,7 @@ $(document).ready(function(){
 			$.each( bg_colors, function( i, val ) {
 				$('body').removeClass(val);
 			});
-			$('body').addClass('grey');
+			$('body').addClass('red');
 			$('header a').removeClass('active');
 			$('header .contact-nav a').addClass('active');
 		}
@@ -124,7 +124,7 @@ $(document).ready(function(){
 			$.each( bg_colors, function( i, val ) {
 				$('body').removeClass(val);
 			});
-			$('body').addClass('grey');
+			$('body').addClass('red');
 			$('header a').removeClass('active');
 			$('header .contact-nav a').addClass('active');
 		}

@@ -7,8 +7,8 @@
 				//print_r($bookmarks);
 				foreach($bookmarks as $bookmark){
 		?>
-					<a class="grid_6 bookmark" href="<?php echo get_permalink($bookmark->ID); ?>">
-						<div class="bookmark-inner">
+					<a class="grid_6 button" href="<?php echo get_permalink($bookmark->ID); ?>">
+						<div class="button-inner">
 							<?php echo $bookmark->post_title; ?>
 						</div>
 					</a>
