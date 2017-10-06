@@ -1187,7 +1187,10 @@ h2.screen-reader-text {
     margin: 0;
     outline: none;
     border: 1px solid #D8D8D8;
-    border-radius: 0.44444rem; }
+    border-radius: 0.44444rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
 
 .single-pagination {
   border-top: 1px solid #D8D8D8;
