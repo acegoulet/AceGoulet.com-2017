@@ -1,7 +1,7 @@
 /* Wordpress Content Styles
 ---------------------------------------------------------------------------------------------------- */
 
-.entry-content {
+.entry-content, .entry-summary {
 
     .alignleft {
     	float: left;
@@ -45,4 +45,10 @@
     > *:first-child {
 	    margin-top: 0;
     }
+    pre {
+		background: $color-white;
+		padding: rem(15px);
+		overflow: auto;
+		margin: rem(25px) 0;
+	}
 }

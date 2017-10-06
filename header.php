@@ -12,6 +12,17 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<a href="javascript:void(0)" class="navicon">
+    	<div class="top-left all-transition"></div>
+    	<div class="top-middle all-transition"></div>
+    	<div class="top-right row-end all-transition"></div>
+    	<div class="middle-left all-transition"></div>
+    	<div class="middle-middle all-transition"></div>
+    	<div class="middle-right row-end all-transition"></div>
+    	<div class="bottom-left bottom-row all-transition"></div>
+    	<div class="bottom-middle bottom-row all-transition"></div>
+    	<div class="bottom-right row-end bottom-row all-transition"></div>
+	</a>
 	<header>
 		<div class="menu-title"><?php bloginfo('name'); ?></div>
 		<?php 

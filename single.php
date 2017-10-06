@@ -18,15 +18,12 @@
 				</div>
 			
 				<div class="entry-footer">
-					<div class="entry-taxonomy">
-						
-					</div>
 					
 					<nav class="single-pagination">
 						<p class="next"><?php next_post_link('Next post: %link'); ?></p>
 						<p class="previous"><?php previous_post_link('Previous post: %link'); ?></p>									</nav>
 				</div>
-				<div class="widget"><strong>Tags: </strong><span class="widget-list"><?php the_tags(''); ?></span></div>
+				<div class="widget">Tags: <span class="widget-list tag-list"><?php the_tags(''); ?></span></div>
 			</div>
 			
 			<?php //get_template_part('templates/partials/post-sidebar'); ?>

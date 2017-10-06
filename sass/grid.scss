@@ -3,6 +3,12 @@
     overflow: hidden;
     margin: 0 auto;
     max-width: 100%;
+    @media #{$desktop-wide-point} {
+	    width: $layout-max-width-tablet;
+    }
+    @media #{$tablet-portrait-point} {
+	    width: $layout-max-width-mobile;
+    }
 }
 
 @mixin ab-grid($columns){

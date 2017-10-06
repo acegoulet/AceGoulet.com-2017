@@ -32,10 +32,10 @@ h3, header a {
 h4, .searchform input {
     font-size: em(18px);
 }
-h5, .link-title, footer, .nav-links {
+h5, .link-title, footer, .nav-links, .tag-list {
     font-size: em(16px);
 }
-h6, .link-description, .link-attribution {
+h6, .link-description, .link-attribution, pre {
     font-size: em(12px);
 }
 
@@ -66,7 +66,7 @@ body {
 	line-height: 1.8181; 
 }
 .entry-meta {
-	line-height: 2.2222;
+	line-height: 2;
 }
 
 /* Colors
@@ -87,14 +87,17 @@ header a {
 header a:hover, header a.active, header .current_page_parent a {
 	color: $color-green;
 }
+h1, .menu-title {
+	color: $color-dark-grey;
+}
 
 /* Weights
 ----------------------------------------------------------------------------------------------------*/
 
-body {
+body, .searchform input {
 	font-weight: 300;
 }
-.link-title, .link-attribution, .button, .page-numbers.current, strong {
+h1, h2, h3, h4, h5, h6, .link-title, .link-attribution, .button, .page-numbers.current, strong {
 	font-weight: 500;
 }
 
@@ -110,7 +113,7 @@ body {
 a {
 	text-decoration: none;
 }
-header, .link-title, .button, {
+header, .link-title, .button, .tag-list {
 	text-transform: uppercase;
 }
 .bookmarked-posts .button {

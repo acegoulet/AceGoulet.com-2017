@@ -3,6 +3,7 @@
 $font-size-base: 18px;
 
 // Breakpoints
+$desktop-wide-point: "(max-width: 1130px)";
 $tablet-landscape-point: "(max-width: 1024px)";
 $tablet-portrait-point: "(max-width: 1023px)";
 $mobile-landscape-wide-point: "(max-width: 767px)";
@@ -11,6 +12,8 @@ $mobile-portrait-point: "(max-width: 479px)";
 
 // Layout
 $layout-max-width: 68%;
+$layout-max-width-tablet: 64%;
+$layout-max-width-mobile: 80%;
 $layout-number-of-columns: 12;
 $layout-column-margin: 0.01;
 
@@ -20,6 +23,8 @@ $color-white: #fff;
 $color-blue: #F1FCFD;
 $color-bg-red: #FDECEB;
 $color-light-grey: #f4f4f4;
+$color-medium-grey: #D8D8D8;
+$color-dark-grey: #3A3A3A;
 $color-yellow: #FFFDE5;
 $color-orange: #FFF2E0;
 $color-green: #25AC99;

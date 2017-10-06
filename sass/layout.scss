@@ -47,6 +47,9 @@ header {
     left: 0;
     padding: 0 0 0 rem(22px);
     z-index: 10;
+    @media #{$tablet-portrait-point} {
+	    width: 100%;
+    }
     ul {
 	    list-style: none;
 	    padding: 0;
@@ -56,7 +59,93 @@ header {
 	    }
     }
 }
-
+.navicon {
+    display: none;
+    width: 31px;
+    height: 31px;
+    position: fixed;
+    top: rem(11px);
+    left: rem(11px);
+    z-index: 10;
+    -moz-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
+    -webkit-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
+    -o-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
+    transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
+    @media #{$tablet-portrait-point} {
+	    display: block;
+    }
+    div {
+        height: 9px;
+        width: 9px;
+        float: left;
+        position: absolute;
+        background-color: $color-dark-grey;
+    }
+    .top-left {
+        left: 0;
+        top: 0;
+    }
+    .top-middle {
+        top: 0;
+        left: 11px;
+    }
+    .top-right {
+        left: 22px;
+        top: 0;
+    }
+    .middle-left {
+        left: 0;
+        top: 11px;
+    }
+    .middle-middle {
+        left: 11px;
+        top: 11px;
+    }
+    .middle-right {
+        right: 0;
+        top: 11px;
+    }
+    .bottom-left {
+        left: 0;
+        bottom: 0;
+    }
+    .bottom-middle {
+        bottom: 0;
+        left: 11px;
+    }
+    .bottom-right {
+        right: 0;
+        bottom: 0;
+    }
+}
+.navicon:hover {
+    div {
+        background-color: $color-green;
+    }
+}
+.menu-open {
+	.navicon {
+		height: 29px;
+        width: 29px;
+        div {
+            opacity: 0;
+        }
+        .top-left, .top-right {
+            opacity: 1;
+            height: 31px;
+        }
+        .top-left {
+            @include rotation(-45deg);
+            left: 8px;
+            top: -1px;
+        }
+        .top-right {
+            @include rotation(45deg);
+            left: 8px;
+            top: -1px;
+        }
+	}
+}
 
 /* Footer
 ----------------------------------------------------------------------------------------------------*/
@@ -177,10 +266,29 @@ footer {
 	margin: 0;
 }
 .roll-header {
-	margin-top: 5%;
+	margin-top: rem(50px);
+	margin-bottom: rem(46px);
+}
+.archive {
+	.roll-header {
+		margin-bottom: rem(80px);
+	}
+}
+.bookmarked-posts {
+	margin-bottom: rem(34px);
+	.button {
+		.button-inner {
+			width: 60%;
+			margin: 0 20%;
+			@media #{$mobile-landscape-wide-point} {
+				width: 70%;
+				margin: 0 15%;
+			}
+		}
+	}
 }
 .entry-meta {
-	margin: 0 0 1em;
+	margin: 0 0 .4em;
 	p {
 		margin: 0;
 	}
@@ -198,31 +306,43 @@ h2.screen-reader-text {
 	margin: 0 .5em;
 }
 .blog-roll-post {
-	margin-bottom: 2em;
+	margin-bottom: 2.8em;
 }
 .searchform {
-	padding: 1% 0 3.3%;
+	padding: rem(40px) 13%;
+	border: 1px solid $color-medium-grey;
 	input[type=text]{
 		width: 100%;
 		padding: .5em .75em;
 		margin: 0;
 		outline: none;
+		border: 1px solid $color-medium-grey;
+		border-radius: rem(8px);
 	}
 }
 .single-pagination {
-	border-top: 1px solid $color-blue;
+	border-top: 1px solid $color-medium-grey;
+	border-bottom: 1px solid $color-medium-grey;
+	padding: 1.6em 0;
+    margin-bottom: 2.5em;
+	p {
+		margin: 0;
+	}
 }
 
 //sidebar
 .sidebar {
 	margin-bottom: 2em;
-	h3 {
+	h2 {
 		margin: 0;
 	}
 	ul {
 		list-style: none;
 		padding: 0;
-		margin: .5em 0 0 0;
+		margin: .6em 0 0 0;
+		li {
+			margin-bottom: rem(12px);
+		}
 	}
 }
 .widget {
@@ -256,5 +376,5 @@ h2.screen-reader-text {
 	opacity: 0;
 }
 h1.page-title {
-	margin: 0% 0 2%;
+	margin: rem(42px) 0 0;
 }
