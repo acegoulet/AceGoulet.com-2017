@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<div class="home-section container home-section-copy" id="contact-scroll">
-				<div class="fade-in-out-scroll">
+				<div class="fade-in-out-scroll" data-section="contact" data-accent-offset="1">
 					<?php the_field('section_4_copy'); ?>
 					<div class="link-wrapper">
 						<?php if( get_field('section_3_links') ): ?>
@@ -78,6 +78,10 @@
 	<div class="accent what">
 		<div class="code-1"></div>
 		<div class="code-2"></div>
+	</div>
+	<div class="accent contact">
+		<div class="contact-1"></div>
+		<div class="contact-2"></div>
 	</div>
 	
 <?php endwhile; ?>

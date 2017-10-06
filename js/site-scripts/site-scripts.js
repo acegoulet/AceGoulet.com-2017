@@ -187,10 +187,10 @@ function scrollfade_in_up(element, range, manualoffset, emthreshold){
 			if (($(this).offset().top - $(window).scrollTop()) < section_accent_offset) { 
 				$('.accent.'+section_accent).css('opacity',0); 
 			} else {
-				$('.accent.'+section_accent).css('opacity',calc); 
-				if ( calc > '1' ) {
+				if(calc > 0){
 					$('.accent.'+section_accent).css({ 'opacity': 1 });
-				} else if ( calc < '0' ) {
+				}
+				else {
 					$('.accent.'+section_accent).css({ 'opacity': 0 });
 				}
 			}
