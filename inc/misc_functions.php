@@ -50,6 +50,19 @@ function theme_scripts_enqueue() {
 add_action( 'wp_enqueue_scripts', 'theme_scripts_enqueue' );
 
 /* ---------------------------------------------
+Remove file versions from enqueues on production site (increases page speed performance)
+--------------------------------------------- */
+
+function aceify_remove_ver_css_js( $src ) {
+	if(strpos($src, 'ver=' ) && get_site_env() == 'production'){
+		$src = remove_query_arg( 'ver', $src );
+	}
+	return $src;
+}
+add_filter( 'style_loader_src', 'aceify_remove_ver_css_js', 9999 );
+add_filter( 'script_loader_src', 'aceify_remove_ver_css_js', 9999 );
+
+/* ---------------------------------------------
 Google Analytics
 --------------------------------------------- */
 
