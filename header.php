@@ -11,8 +11,8 @@
 	<link rel="manifest" href="<?php bloginfo('template_directory'); ?>/img/manifest.json?v=3">
 	<link rel="mask-icon" href="<?php bloginfo('template_directory'); ?>/img/safari-pinned-tab.svg?v=3" color="#25ac99">
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicon.ico?v=3">
-	<meta name="apple-mobile-web-app-title" content="AceGoulet.com">
-	<meta name="application-name" content="AceGoulet.com">
+	<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
+	<meta name="application-name" content="<?php bloginfo('name'); ?>">
 	<meta name="msapplication-config" content="<?php bloginfo('template_directory'); ?>/img/browserconfig.xml?v=3">
 	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
