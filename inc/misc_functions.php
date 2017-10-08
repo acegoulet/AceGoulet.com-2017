@@ -36,6 +36,16 @@ function theme_enqueue_styles() {
 Enqueue Scripts.
 --------------------------------------------- */
 
+//remove jquery and re-enqueue in footer
+function aceify_jquery_init() {
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', FALSE, '1.12.4', TRUE);
+		wp_enqueue_script('jquery');
+	}
+}
+add_action('init', 'aceify_jquery_init');
+
 function theme_scripts_enqueue() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('waypoints', gtdu(). '/js/vendor/jquery.waypoints.min.js', 'jquery', '4.0.1', true);
