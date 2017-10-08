@@ -766,7 +766,7 @@ h3, header a {
 h4, .searchform input {
   font-size: 1em; }
 
-h5, .link-title, footer, .nav-links, .tag-list {
+h5, .link-title, footer, .nav-links, .tag-list, .entry-meta {
   font-size: 0.88889em; }
 
 h6, .link-description, .link-attribution, pre {
@@ -1162,6 +1162,9 @@ footer {
   margin: 0 0 .4em; }
   .entry-meta p {
     margin: 0; }
+  .entry-meta .entry-meta-block {
+    display: inline-block;
+    margin: 0 .5em; }
 
 h2.screen-reader-text {
   display: none; }
@@ -1177,6 +1180,8 @@ h2.screen-reader-text {
 
 .blog-roll-post {
   margin-bottom: 2.8em; }
+  .blog-roll-post .entry-meta .entry-meta-block {
+    margin: 0 .5em 0 0; }
 
 .searchform {
   padding: 2.22222rem 13%;

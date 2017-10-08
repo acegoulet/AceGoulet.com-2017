@@ -325,6 +325,10 @@ footer {
 	p {
 		margin: 0;
 	}
+	.entry-meta-block {
+		display: inline-block;
+		margin: 0 .5em;
+	}
 }
 h2.screen-reader-text {
     display: none;
@@ -340,6 +344,11 @@ h2.screen-reader-text {
 }
 .blog-roll-post {
 	margin-bottom: 2.8em;
+	.entry-meta {
+		.entry-meta-block {
+			margin: 0 .5em 0 0;
+		}
+	}
 }
 .searchform {
 	padding: rem(40px) 13%;

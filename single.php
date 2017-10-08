@@ -5,9 +5,7 @@
 		<div class="entry-header container roll-header text-center">
 			<div class="grid_12">
 				<h1 class="page-title"><?php the_title(); ?></h1>
-				<div class="entry-meta">
-				    <p><?php the_time(get_option('date_format')); ?></p>
-				</div>
+				<?php get_template_part('templates/partials/entry-meta'); ?>
 			</div>
 			<div class="clear"></div>
 		</div>
