@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var buffer = require('vinyl-buffer');
 var order = require("gulp-order");
 var concat = require("gulp-concat");
+var cleanCSS = require('gulp-clean-css');
 
 /* EXAMPLE with dependencies:
 var js_files = [
@@ -29,6 +30,7 @@ gulp.task('scriptsmin', function() {
 gulp.task('sass', function(){
   gulp.src('./sass/style.scss')
     .pipe(sass())
+    .pipe(cleanCSS())
     .pipe(gulp.dest('./'))
 })
 
