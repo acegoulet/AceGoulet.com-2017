@@ -38,7 +38,7 @@ Enqueue Scripts.
 
 //remove jquery and re-enqueue in footer
 function aceify_jquery_init() {
-	if (!is_admin()) {
+	if (!is_admin() && $GLOBALS['pagenow'] !== 'wp-login.php') {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', FALSE, '1.12.4', TRUE);
 		wp_enqueue_script('jquery');
