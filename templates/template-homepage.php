@@ -37,11 +37,15 @@
 									$count = 0;
 									while( has_sub_field('portfolio') ){
 							?>
+								<?php if(!empty(get_sub_field('link'))){ ?>
 										<a href="<?php the_sub_field('link'); ?>" target="_blank" class="port-links">
+								<?php } else { echo '<span class="port-links">'; }?>
 											<span class="link-title"><?php the_sub_field('title'); ?></span>
 											<span class="link-attribution"><?php the_sub_field('attribution'); ?></span>
 											<span class="link-description"><?php the_sub_field('text'); ?></span>
+								<?php if(!empty(get_sub_field('link'))){ ?>
 										</a>
+								<?php } else { echo '</span>'; } ?>
 								
 							<?php 
 										if($count == $links_per_column - 1){ 

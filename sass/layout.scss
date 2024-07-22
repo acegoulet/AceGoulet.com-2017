@@ -222,68 +222,68 @@ footer {
 	}
 }
 
-.palm-1 {
-	position: fixed;
-	width: 191px;
-	height: 302px;
-	background: url('img/cactus.svg') no-repeat center;
-	background-size: 100% auto;
-    bottom: 0;
-    right: 29px;
-    z-index: -1;
-}
-.palm-2 {
-	position: fixed;
-	width: 482px;
-	height: 283px;
-	background: url('img/palm-trees.svg') no-repeat center;
-	background-size: 100% auto;
-    bottom: 0;
-    left: 0;
-    //transform: rotate(50deg);
-    //left: -100px;
-    z-index: -1;
-}
-.code-1 {
-	position: fixed;
-	width: 180px;
-	height: 282px;
-	background: url('img/code-dollar.svg') no-repeat center;
-	background-size: 100% auto;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-.code-2 {
-	position: fixed;
-	width: 284px;
-	height: 265px;
-	background: url('img/code-bracket.svg') no-repeat center;
-	background-size: 100% auto;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
-.contact-1 {
-	position: fixed;
-	width: 173px;
-	height: 395px;
-	background: url('img/phone.svg') no-repeat center;
-	background-size: 100% auto;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-.contact-2 {
-	position: fixed;
-	width: 264px;
-	height: 258px;
-	background: url('img/beeper.svg') no-repeat center;
-	background-size: 100% auto;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
+// .palm-1 {
+// 	position: fixed;
+// 	width: 191px;
+// 	height: 302px;
+// 	background: url('img/cactus.svg') no-repeat center;
+// 	background-size: 100% auto;
+//     bottom: 0;
+//     right: 29px;
+//     z-index: -1;
+// }
+// .palm-2 {
+// 	position: fixed;
+// 	width: 482px;
+// 	height: 283px;
+// 	background: url('img/palm-trees.svg') no-repeat center;
+// 	background-size: 100% auto;
+//     bottom: 0;
+//     left: 0;
+//     //transform: rotate(50deg);
+//     //left: -100px;
+//     z-index: -1;
+// }
+// .code-1 {
+// 	position: fixed;
+// 	width: 180px;
+// 	height: 282px;
+// 	background: url('img/code-dollar.svg') no-repeat center;
+// 	background-size: 100% auto;
+//     bottom: 0;
+//     right: 0;
+//     z-index: -1;
+// }
+// .code-2 {
+// 	position: fixed;
+// 	width: 284px;
+// 	height: 265px;
+// 	background: url('img/code-bracket.svg') no-repeat center;
+// 	background-size: 100% auto;
+//     bottom: 0;
+//     left: 0;
+//     z-index: -1;
+// }
+// .contact-1 {
+// 	position: fixed;
+// 	width: 173px;
+// 	height: 395px;
+// 	background: url('img/phone.svg') no-repeat center;
+// 	background-size: 100% auto;
+//     bottom: 0;
+//     right: 0;
+//     z-index: -1;
+// }
+// .contact-2 {
+// 	position: fixed;
+// 	width: 264px;
+// 	height: 258px;
+// 	background: url('img/beeper.svg') no-repeat center;
+// 	background-size: 100% auto;
+//     bottom: 0;
+//     left: 0;
+//     z-index: -1;
+// }
 .accent {
 	position: relative;
 	z-index: -1;
